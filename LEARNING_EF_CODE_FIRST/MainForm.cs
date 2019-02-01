@@ -14,7 +14,7 @@ namespace LEARNING_EF_CODE_FIRST
 			recordCountLabel.Text = string.Empty;
 		}
 
-		private void searchButton_Click(object sender, System.EventArgs e)
+		private void SearchButton_Click(object sender, System.EventArgs e)
 		{
 			recordCountLabel.Text = string.Empty;
 
@@ -68,7 +68,8 @@ namespace LEARNING_EF_CODE_FIRST
 					.ToList()
 					;
 
-				recordCountLabel.Text = $"Record Count: { result.Count }";
+				recordCountLabel.Text =
+					$"Record Count: { result.Count }";
 
 				countriesListBox.ValueMember = "Id";
 				countriesListBox.DisplayMember = "DisplayName";

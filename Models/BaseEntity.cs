@@ -1,6 +1,6 @@
 ﻿namespace Models
 {
-	public class BaseEntity : object
+	public abstract class BaseEntity : object
 	{
 		public BaseEntity() : base()
 		{
