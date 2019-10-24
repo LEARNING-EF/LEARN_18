@@ -71,8 +71,9 @@ namespace LEARNING_EF_CODE_FIRST
 				recordCountLabel.Text =
 					$"Record Count: { result.Count }";
 
-				countriesListBox.ValueMember = "Id";
-				countriesListBox.DisplayMember = "DisplayName";
+				countriesListBox.ValueMember = nameof(Models.Country.Id);
+				countriesListBox.DisplayMember = nameof(Models.Country.DisplayName);
+
 				countriesListBox.DataSource = result;
 			}
 			catch (System.Exception ex)
