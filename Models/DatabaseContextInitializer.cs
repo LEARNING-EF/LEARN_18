@@ -3,21 +3,21 @@
 	internal class DatabaseContextInitializer :
 		System.Data.Entity.DropCreateDatabaseIfModelChanges<DatabaseContext>
 	{
+		private object index;
+
 		public DatabaseContextInitializer() : base()
 		{
 		}
 
 		protected override void Seed(DatabaseContext databaseContext)
 		{
-			Country country = null;
-
-			for (int countryIndex = 1; countryIndex <= 200; countryIndex++)
+			for (int counter = 1; counter <= 200; counter++)
 			{
-				country =
+				Country country =
 					new Country()
 					{
-						Code = countryIndex,
-						Name = $"Country ({ countryIndex })",
+						Code = counter,
+						Name = $"Country ({ counter })",
 					};
 
 				databaseContext.Countries.Add(country);
