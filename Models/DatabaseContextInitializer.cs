@@ -3,8 +3,6 @@
 	internal class DatabaseContextInitializer :
 		System.Data.Entity.DropCreateDatabaseIfModelChanges<DatabaseContext>
 	{
-		private object index;
-
 		public DatabaseContextInitializer() : base()
 		{
 		}
@@ -14,7 +12,7 @@
 			for (int counter = 1; counter <= 200; counter++)
 			{
 				Country country =
-					new Country()
+					new Country
 					{
 						Code = counter,
 						Name = $"Country ({ counter })",
